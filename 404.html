@@ -9,7 +9,7 @@
   <body>
     <h1></h1>
     <script>
-      const url = `${location.pathname}`;
+      const url = decodeURIComponent(location.pathname);
       const el = document.querySelector("h1");
       el.innerHTML = `<a href="${url}">${url}</a>`;
     </script>
